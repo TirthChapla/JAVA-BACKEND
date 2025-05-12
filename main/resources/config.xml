@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean
+            class="com.substring.concepts.Engine"
+            id="engine"
+    >
+
+
+        <property
+            name="modelName"
+            value="Turbo 215"
+        ></property>
+
+    </bean>
+
+    <bean
+            class="com.substring.concepts.Car"
+            id="car"
+            autowire="byType"
+    >
+
+        <property
+
+                name="name"
+                value="AUDI"
+        ></property>
+
+<!--        <property-->
+<!--            name="engine"-->
+<!--            ref="engine"-->
+<!--        ></property>-->
+
+    </bean>
+
+</beans>
