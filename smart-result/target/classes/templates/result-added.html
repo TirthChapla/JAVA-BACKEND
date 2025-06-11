@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Result Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-cyan-400 to-blue-600 min-h-screen flex items-center justify-center p-4">
+
+<div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
+    <h1 class="text-3xl font-bold text-green-600 mb-4">🎉 Result Added Successfully!</h1>
+    <p class="text-gray-700 text-lg mb-6">The student's result has been saved in the database.</p>
+
+    <div class="flex justify-center space-x-4">
+        <a th:href="@{'/results/add-result'}"
+           class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold transition">
+            Add Another Result
+        </a>
+        <a th:href="@{'/'}"
+           class="bg-gray-500 hover:bg-gray-600 text-white px-5 py-2 rounded-lg font-semibold transition">
+            Back to Home
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+<nav class="bg-gray-800 p-4 flex justify-between">
+    <div class="text-xl font-bold">Smart Result</div>
+    <div class="space-x-4">
+        <a href="index.html" class="hover:text-blue-400">Home</a>
+        <a href="add-result.html" class="hover:text-blue-400">Add Result</a>
+        <a href="view-result.html" class="hover:text-blue-400">View Result</a>
+    </div>
+</nav>
+<main class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Marksheet</h2>
+    <div class="bg-gray-800 p-4 rounded">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Roll Number:</strong> 12345</p>
+        <p><strong>Email:</strong> john@example.com</p>
+        <p><strong>School:</strong> Smart High School</p>
+        <p><strong>DOB:</strong> 2005-06-15</p>
+        <p><strong>Gender:</strong> Male</p>
+    </div>
+
+    <table class="w-full mt-6 text-left">
+        <thead class="bg-gray-700">
+        <tr>
+            <th class="p-2">Subject</th>
+            <th class="p-2">Marks</th>
+            <th class="p-2">Max Marks</th>
+            <th class="p-2">Grade</th>
+            <th class="p-2">Remark</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="bg-gray-800">
+            <td class="p-2">Math</td>
+            <td class="p-2">88</td>
+            <td class="p-2">100</td>
+            <td class="p-2">A</td>
+            <td class="p-2">Excellent</td>
+        </tr>
+        <tr class="bg-gray-800">
+            <td class="p-2">Science</td>
+            <td class="p-2">92</td>
+            <td class="p-2">100</td>
+            <td class="p-2">A+</td>
+            <td class="p-2">Outstanding</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-4">
+        <p><strong>Total Marks:</strong> 190 / 200</p>
+        <p><strong>Percentage:</strong> 95%</p>
+    </div>
+</main>
+</body>
+</html>

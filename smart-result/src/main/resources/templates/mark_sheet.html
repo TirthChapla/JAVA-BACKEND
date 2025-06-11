@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Marksheet - SmartResult</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10 px-4">
+
+<div class="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8">
+  <!-- Title -->
+  <div class="text-center mb-6">
+    <h1 class="text-3xl font-bold text-blue-800">Student Marksheet</h1>
+    <p class="text-gray-600">Academic Performance Summary</p>
+  </div>
+
+  <!-- Student Info -->
+  <div class="mt-8 bg-gray-50 border rounded-xl p-6" xmlns:th="http://www.thymeleaf.org">
+    <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+      <div><strong>Total Marks:</strong> <span th:text="${obtainMarks}"></span> / <span th:text="${totalMarks}"></span></div>
+      <div><strong>Percentage:</strong> <span th:text="${percentage}"></span>%</div>
+      <div><strong>Overall Grade:</strong> <span th:text="${overallGrade}"></span></div>
+      <div><strong>Feedback:</strong> Keep up the excellent work!</div>
+    </div>
+  </div>
+
+
+  <!-- Subject Marks Table -->
+  <div class="overflow-x-auto">
+    <table class="min-w-full text-sm text-left border border-gray-300 rounded-lg overflow-hidden">
+      <thead class="bg-blue-600 text-white">
+      <tr>
+        <th class="px-4 py-2">Subject</th>
+        <th class="px-4 py-2">Marks</th>
+        <th class="px-4 py-2">Max Marks</th>
+        <th class="px-4 py-2">Grade</th>
+        <th class="px-4 py-2">Remark</th>
+      </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200" th:each="mark : ${student.markList}">
+      <tr>
+        <td class="px-4 py-2" th:text="${mark.subject}">Mathematics</td>
+        <td class="px-4 py-2" th:text="${mark.marks}">95</td>
+        <td class="px-4 py-2" th:text="${mark.maxMarks}">100</td>
+        <td class="px-4 py-2" th:text="${mark.grade}">A+</td>
+        <td class="px-4 py-2" th:text="${mark.remark}">Excellent</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="mt-8 bg-gray-50 border rounded-xl p-6">
+    <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+      <div><strong>Total Marks:</strong> <span th:text="${obtainMarks}">448</span> / <span th:text="${totalMarks}">500</span></div>
+      <div><strong>Percentage:</strong> <span th:text="${percentage}">89.6</span>%</div>
+      <div><strong>Overall Grade:</strong> <span th:text="${overallGrade}">A</span></div>
+      <div><strong>Feedback:</strong> Keep up the excellent work!</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="text-center text-xs text-gray-500 mt-10">
+    © 2025 SmartResult. All rights reserved.
+  </div>
+</div>
+
+</body>
+</html>
