@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Profile Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+<div class="bg-white p-6 rounded-xl shadow-md max-w-md w-full relative">
+
+    <!-- Profile Image -->
+    <div class="flex items-center gap-4">
+        <div class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 p-1 rounded-full">
+            <img th:href="${url}" alt="profile"
+                 class="w-20 h-20 rounded-full border-4 border-white object-cover">
+        </div>
+
+        <!-- Stats -->
+        <div class="flex justify-between w-full text-center">
+            <div>
+                <h2 class="text-lg font-bold">8</h2>
+                <p class="text-sm text-gray-500">Posts</p>
+            </div>
+            <div>
+                <h2 class="text-lg font-bold">12k</h2>
+                <p class="text-sm text-gray-500">Followers</p>
+            </div>
+            <div>
+                <h2 class="text-lg font-bold">2k</h2>
+                <p class="text-sm text-gray-500">Following</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Button -->
+    <div class="mt-4">
+        <button class="w-full bg-gray-200 text-gray-700 font-semibold py-2 rounded-md hover:bg-gray-300">
+            Edit Profile
+        </button>
+    </div>
+
+    <!-- Bio Section -->
+    <div class="mt-4 space-y-1 text-sm leading-relaxed text-gray-800">
+        <p>♣️ <span class="font-semibold">Live a chill life.</span></p>
+        <p>🎸 <span class="font-semibold">CricketHolic 🏆</span></p>
+        <p>💪 <span class="font-semibold">Young Bøy Living Cool</span></p>
+        <p>📚 <span class="font-semibold">Learning, growing, evolving 🧠</span></p>
+    </div>
+
+
+</div>
+
+</body>
+</html>
