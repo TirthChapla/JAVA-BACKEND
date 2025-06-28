@@ -23,7 +23,7 @@ public class EmployeeService
     {
 
         //✅ 1. Sort: we use Conditional operator here
-        Sort sort = sortBy.trim().toLowerCase().equals("asc") ? Sort.by(sortBy).ascending() : Sort.by(sortBy).descending();
+        Sort sort = sortDir.trim().toLowerCase().equals("asc") ? Sort.by(sortBy).ascending() : Sort.by(sortBy).descending();
 
         //✅ 2. Pageable : it holds info. related to Paiging
         Pageable pageable = PageRequest.of(page,size,sort);
