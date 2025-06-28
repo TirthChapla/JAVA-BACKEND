@@ -19,7 +19,7 @@ public class EmployeeService
 
     //✅❤️ Paging n Sorting
 
-    public Page<Employee> getAllEmployes(int page , int size , String sortBy , String srtDir)
+    public Page<Employee> getAllEmployes(int page , int size , String sortBy , String sortDir)
     {
 
         //✅ 1. Sort: we use Conditional operator here
