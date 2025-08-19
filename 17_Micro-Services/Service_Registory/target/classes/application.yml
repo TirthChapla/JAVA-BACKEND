@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: service-registry
+
+eureka:
+  client:
+    register-with-eureka: false    # we use false because server can't register itself as client
+    fetch-registry: false          # we use false because server can't fetch the data from itself
+
